@@ -24,10 +24,12 @@ cp ot-recorder.default /etc/default/ot-recorder
 cp launcher.sh /usr/local/sbin/launcher.sh
 cp generate-CA.sh /usr/local/sbin/generate-CA.sh
 
+mkdir -p -m 775 /etc/supervisor/conf.d/
 cp supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+mkdir -p -m 775 /etc/mosquitto
 cp mosquitto.conf mosquitto.acl /etc/mosquitto/
 
-mkdir -p /var/log/supervisor && \
+mkdir -p -m 775 /var/log/supervisor && \
 mkdir -p -m 775 /owntracks/recorder/store && \
 chown -R owntracks:owntracks /owntracks && \
-chmod 755 /usr/local/sbin/launcher.sh /usr/local/sbin/generate-CA.sh /usr/local/sbin/recorder-health.sh
+chmod 755 /usr/local/sbin/launcher.sh /usr/local/sbin/generate-CA.sh
