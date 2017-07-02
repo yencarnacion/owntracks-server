@@ -36,7 +36,7 @@ $ git clone https://github.com/yencarnacion/owntracks-server
 # Step 8 (in the owntracks VM)
 # provision the machine
 $ cd owntracks-server
-$ sudo bash go.sh
+$ sudo MQTTHOSTNAME="m.dashboardpr.com" HOSTLIST="m.dashboardpr.com w.dashboardpr.com www.dashboardpr.com dashboardpr.com" OTR_BROWSERAPIKEY="AIzaSyBMdIEL958iCXBxcXW684WenDUMP6ogATE" go.sh
 
 ----
 

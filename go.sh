@@ -35,3 +35,5 @@ mkdir -p -m 775 /owntracks/recorder/store && \
 
 chown -R owntracks:owntracks /owntracks && \
 chmod 755 /usr/local/sbin/launcher.sh /usr/local/sbin/generate-CA.sh
+
+/usr/local/sbin/launcher.sh
