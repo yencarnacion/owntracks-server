@@ -1,0 +1,33 @@
+
+
+=== How to run
+.To get this project working, perform the following steps:
+----
+
+# Step 1 (in your local machine)
+# set the google project
+$ gcloud config set project propel-gps
+
+# Step 2 (in your local machine)
+# set the compute zone
+$ gcloud config set compute/zone us-central1-b
+
+# Step 3 (in your local machine)
+# create the jupyter machine
+$ gcloud compute instances create propel-owntracks --scopes compute-rw --image-family ubuntu-1604-lts --image-project ubuntu-os-cloud --zone us-central1-b --scopes https://www.googleapis.com/auth/devstorage.read_write --machine-type g1-small --address 104.154.134.84
+
+# Step 4 (in your local machine)
+# SSH into the propel-owntracks machine
+$ gcloud compute ssh propel-owntracks --zone us-central1-b
+
+# Step 5 (in the owntracks VM)
+# clone repo
+$ git clone https://github.com/yencarnacion/owntracks-server
+
+# Step 6 (in the owntracks VM)
+# provision the machine
+$ cd owntracks-server
+$ sudo bash go.sh
+
+----
+
