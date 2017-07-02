@@ -33,7 +33,5 @@ cp mosquitto.conf mosquitto.acl /etc/mosquitto/
 mkdir -p -m 775 /var/log/supervisor && \
 mkdir -p -m 775 /owntracks/recorder/store && \
 
-useradd owntracks
-
 chown -R owntracks:owntracks /owntracks && \
 chmod 755 /usr/local/sbin/launcher.sh /usr/local/sbin/generate-CA.sh
