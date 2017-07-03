@@ -46,6 +46,10 @@ fi
 if [ ! -f /owntracks/mosquitto/mosquitto.acl ]; then
 	cp /etc/mosquitto/mosquitto.acl /owntracks/mosquitto/mosquitto.acl
 fi
+if [ ! -f /owntracks/mosquitto/mosquitto.passwd ]; then
+	cp /etc/mosquitto/mosquitto.passwd /owntracks/mosquitto/mosquitto.passwd
+	/usr/bin/mosquitto_passwd -U /owntracks/mosquitto/mosquitto.passwd
+fi
 
 # Put ot-recorder defaults in volume
 if [ ! -f /owntracks/etc/default/ot-recorder ]; then

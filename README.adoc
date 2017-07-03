@@ -16,6 +16,7 @@ $ gcloud config set compute/zone us-central1-b
 # Create the appropriate firewall rules
 $ gcloud beta compute --project "propel-gps" firewall-rules create "allow-8083" --allow tcp:8083 --direction "INGRESS" --priority "1000" --network "default" --source-ranges "0.0.0.0/0"
 $ gcloud beta compute --project "propel-gps" firewall-rules create "allow-1883" --allow tcp:1883 --direction "INGRESS" --priority "1000" --network "default" --source-ranges "0.0.0.0/0"
+$ gcloud beta compute --project "propel-gps" firewall-rules create "allow-8883" --allow tcp:8883 --direction "INGRESS" --priority "1000" --network "default" --source-ranges "0.0.0.0/0"
 
 # Step 4 (in your local machine)
 # create the propel-owntracks machine

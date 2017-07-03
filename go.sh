@@ -28,8 +28,7 @@ cp generate-CA.sh /usr/local/sbin/generate-CA.sh
 #mkdir -p -m 775 /etc/supervisor/conf.d/
 cp supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 #mkdir -p -m 775 /etc/mosquitto
-cp mosquitto.conf mosquitto.acl /etc/mosquitto/
-
+cp mosquitto.passwd mosquitto.conf mosquitto.acl /etc/mosquitto/
 mkdir -p -m 775 /var/log/supervisor && \
 mkdir -p -m 775 /owntracks/recorder/store && \
 
