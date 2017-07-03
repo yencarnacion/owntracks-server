@@ -39,6 +39,9 @@ $ git clone https://github.com/yencarnacion/owntracks-server
 $ cd owntracks-server
 $ sudo bash ./go.sh
 
+# Step 9 (in the owntracks VM)
+$ nohup /usr/local/sbin/owntracks &
+
 ----
 
 

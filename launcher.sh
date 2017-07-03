@@ -66,5 +66,5 @@ fi
 # copy ot-recorder defaults back to /etc/default/
 cp /owntracks/etc/default/ot-recorder /etc/default/ot-recorder
 
-sudo service mosquitto stop
+#sudo service mosquitto stop
 /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf

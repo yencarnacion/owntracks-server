@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 ### BEGIN INIT INFO
 # Provides:		owntracks
@@ -36,7 +36,7 @@ run_by_init() {
     ([ "$previous" ] && [ "$runlevel" ]) || [ "$runlevel" = S ]
 }
 
-export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin:/usr/local/sbin"
 
 case "$1" in
   start)

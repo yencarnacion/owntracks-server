@@ -34,12 +34,12 @@ cp mosquitto.passwd mosquitto.conf mosquitto.acl /etc/mosquitto/
 mkdir -p -m 775 /var/log/supervisor && \
 mkdir -p -m 775 /owntracks/recorder/store && \
 chown -R owntracks:owntracks /owntracks && \
-chmod 755 /usr/local/sbin/launcher.sh /usr/local/sbin/generate-CA.sh
+chmod 755 /usr/local/sbin/owntracks /usr/local/sbin/generate-CA.sh
 
 /etc/init.d/mosquitto stop
 chmod -x /etc/init.d/mosquitto
 
-cp owntracks /etc/init.d/owntracks
-chmod +x /etc/init.d/owntracks
+#cp owntracks /etc/init.d/owntracks
+#chmod +x /etc/init.d/owntracks
 
-/etc/init.d/owntracks start
+#/etc/init.d/owntracks start
