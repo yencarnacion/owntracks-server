@@ -22,7 +22,9 @@ apt-get update && \
 
 cp ot-recorder.default /etc/default/ot-recorder
    
-cp launcher.sh /usr/local/sbin/launcher.sh
+cp launcher.sh /usr/local/sbin/owntracks
+chmod +x /usr/local/sbin/owntracks
+
 cp generate-CA.sh /usr/local/sbin/generate-CA.sh
 
 #mkdir -p -m 775 /etc/supervisor/conf.d/
@@ -34,4 +36,10 @@ mkdir -p -m 775 /owntracks/recorder/store && \
 chown -R owntracks:owntracks /owntracks && \
 chmod 755 /usr/local/sbin/launcher.sh /usr/local/sbin/generate-CA.sh
 
-/usr/local/sbin/launcher.sh
+/etc/init.d/mosquitto stop
+chmod -x /etc/init.d/mosquitto
+
+cp owntracks /etc/init.d/owntracks
+chmod +x /etc/init.d/owntracks
+
+/etc/init.d/owntracks start

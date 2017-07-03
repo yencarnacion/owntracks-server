@@ -2,6 +2,13 @@
 # launcher.sh
 # This will be started when the container starts
 
+
+#### Remember README ***** This needs to be changed by client ####
+export MQTTHOSTNAME="m.dashboardpr.com"
+export HOSTLIST="m.dashboardpr.com w.dashboardpr.com www.dashboardpr.com dashboardpr.com"
+export OTR_BROWSERAPIKEY="AIzaSyBMdIEL958iCXBxcXW684WenDUMP6ogATE"
+#### Remember README ***** This needs to be changed by client ####
+
 set -e
 
 echo -- "--- BEGIN OWNTRACKS LAUNCHER ---"
