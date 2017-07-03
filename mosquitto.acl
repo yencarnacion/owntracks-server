@@ -4,4 +4,4 @@ topic read owntracks/#
 
 # This affects all clients.
 pattern write $SYS/broker/connection/%c/state
-pattern readwrite owntracks/%u
+pattern readwrite owntracks/%u/#
